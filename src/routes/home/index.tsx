@@ -6,11 +6,14 @@ function Home() {
     <section className="homePage">
       <div className="container">
         <div className="row">
-          <div className="col-md-5 d-flex justify-content-center">
+          <div className="col-md-5 d-flex justify-content-center align-items-center">
             <Login />
           </div>
           <div className="col-md-7 text-right">
-            <img height="560" src="./vpncrypto-protocol-gif-transparent.gif.gif.svg" />
+            <img
+              height="560"
+              src="./vpncrypto-protocol-gif-transparent.gif.gif.svg"
+            />
           </div>
         </div>
       </div>
