@@ -1,0 +1,16 @@
+input.form-control {
+  background-color: transparent;
+  color: $primary-font-color !important;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 39px;
+  padding: 12px 24px;
+  &:focus {
+    background: transparent;
+    border-color: $blue-color;
+  }
+
+  &::placeholder {
+    color: #ffffff6b;
+  }
+}

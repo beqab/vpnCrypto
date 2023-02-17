@@ -1,0 +1,31 @@
+.header {
+  background-color: $primary-color;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_menu {
+    display: flex;
+    ul {
+      display: flex;
+      margin-bottom: 0px;
+      margin-right: 40px;
+      li {
+        line-height: 54px;
+      }
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: $primary-font-color;
+        text-decoration: none;
+        padding: 0px 14px;
+      }
+    }
+  }
+}

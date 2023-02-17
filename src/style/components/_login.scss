@@ -1,0 +1,32 @@
+.login {
+  background: #1e1e1e;
+  border-radius: 16px;
+  padding: 40px 57px;
+  width: 489px;
+  h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    margin-bottom: 30px;
+    font-family: $secondary-font;
+  }
+  button {
+    height: 48px;
+    white-space: nowrap;
+  }
+  input {
+    margin-bottom: 15px;
+  }
+  a {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+  label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

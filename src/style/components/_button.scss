@@ -1,0 +1,24 @@
+.btn {
+  background: linear-gradient(140deg, #425b76 0%, #3574e3 100%);
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $primary-font-color;
+  display: flex;
+  align-items: center;
+  padding: 17px 32px;
+  transition: 0.3s;
+  &:hover {
+    background: linear-gradient(140deg, #7a9bbe 0%, #3574e3 100%);
+  }
+  &-light {
+    background: transparent !important;
+    border: 1px solid #fff;
+    &:hover {
+      color: #5ea4fc;
+      border-color: #5ea4fc;
+    }
+  }
+}

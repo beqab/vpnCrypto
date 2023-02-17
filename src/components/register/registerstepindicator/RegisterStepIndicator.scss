@@ -1,0 +1,42 @@
+.register_steps {
+  display: flex;
+  justify-content: space-between;
+  max-width: 650px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  &::before {
+    height: 2px;
+    width: calc(100% - 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #fff;
+  }
+}
+
+.register_step_point {
+  cursor: pointer;
+  position: relative;
+  position: relative;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &_label {
+    position: absolute;
+    top: -31px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

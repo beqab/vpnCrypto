@@ -1,0 +1,247 @@
+.dashboardMenu {
+  background-color: #141616;
+  max-width: 266px;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: -75px;
+  padding-left: 34px;
+  &_logo {
+    margin-bottom: 134px;
+    display: inline-block;
+    margin-top: 35px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      margin-bottom: 32px;
+      span {
+        padding-left: 18px;
+      }
+    }
+    a {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration: none;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $orange-color;
+        svg {
+          path {
+            fill: $orange-color;
+            opacity: 1;
+          }
+        }
+      }
+
+      &.active {
+        color: $orange-color;
+        svg {
+          path {
+            fill: $orange-color;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    svg {
+      width: 40px;
+    }
+  }
+}
+.dashboardHeader {
+  background-color: #141616;
+  margin-left: 266px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 32px;
+  position: relative;
+  .headrCorner {
+    position: absolute;
+    left: 0px;
+    bottom: -17px;
+  }
+  &_title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 50px;
+    font-family: $secondary-font;
+  }
+  .notification {
+    margin-right: 20px;
+  }
+}
+
+.dashboardContainer {
+  max-width: 266px;
+}
+
+.dashboardContainer {
+  max-width: 20000px;
+  margin-right: 32px;
+  padding-left: 24px;
+  padding-top: 24px;
+}
+
+.dashboardInfoLine {
+  &_card {
+    background-color: #141616;
+    border-radius: 16px;
+    padding: 32px 28px;
+  }
+  &_subTitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #9e9e9e;
+  }
+  &_title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-top: 4px;
+    font-family: $secondary-font;
+  }
+  &_testBox {
+    margin-left: 20px;
+  }
+}
+.labelsGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  div {
+    padding: 10px 60px;
+    background-color: #ffffff1a;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+
+    &:hover,
+    &.active {
+      background-color: #ff51012f;
+      border-color: $orange-color;
+      color: $orange-color;
+    }
+  }
+}
+
+.adWrapper {
+  background-color: #141616;
+  border-radius: 24px;
+  width: 100%;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buyBox {
+  margin-top: 24px;
+  background-color: #141616;
+  border-radius: 12px;
+  padding: 51px 20px;
+  p {
+    text-align: center;
+    max-width: 237px;
+    margin: auto;
+    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 146.52%;
+  }
+  div {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.transactions {
+  margin-top: 24px;
+  background-color: #141616;
+  border-radius: 12px;
+  padding: 24px;
+  &_title {
+    margin-bottom: 23px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.832639px solid #383838;
+    padding-bottom: 13px;
+    padding-top: 13px;
+    &_label {
+      font-weight: 400;
+      font-size: 9.99167px;
+      line-height: 12px;
+      color: #9e9e9e;
+    }
+    &_date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-top: 3px;
+    }
+    &_amount {
+      color: #1fcb4f;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.pnSoftware {
+  background-color: #141616;
+  border-radius: 10px;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .downloadGroup {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    a {
+      display: inline-block;
+      margin: 10px;
+    }
+  }
+}
+
+.VpnConfig {
+  background-color: #141616;
+  border-radius: 10px;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

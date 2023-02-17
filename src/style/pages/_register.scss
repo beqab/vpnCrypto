@@ -1,0 +1,122 @@
+.register {
+  &_wrapper {
+    background-color: #1e1e1e;
+    padding: 80px 80px 170px 80px;
+    max-width: 1180px;
+    margin: auto;
+    border-radius: 16px;
+    margin-bottom: 150px;
+    .miniCOntainer {
+      max-width: 377px;
+      margin: auto;
+    }
+    .downloadGroup {
+      display: flex;
+      justify-content: space-between;
+      img {
+        // margin: 0 4px;
+        max-height: 63px;
+      }
+    }
+    .line {
+      width: calc(100% + 160px);
+      height: 1px;
+      background-color: #ffffff;
+      margin-left: -80px;
+      margin-right: -80px;
+      opacity: 0.16;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    form {
+      max-width: 450px;
+      margin: auto;
+    }
+
+    .registerStep {
+      max-width: 450px;
+      margin: auto;
+      width: 100%;
+      margin-top: 32px;
+      label {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: #ffffff98;
+        margin-bottom: 14px;
+        margin-top: 35px;
+      }
+      span {
+        color: rgba(255, 255, 255, 0.6);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      h2 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        font-family: $secondary-font;
+      }
+    }
+  }
+}
+
+.confirmField_wrapper {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  .styles_react-code-input__CRulA > input {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    margin: 0 8px;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .styles_react-code-input__CRulA > input:focus + input {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  // .styles_react-code-input__CRulA {
+  //   max-width: 392px;
+  //   margin: auto;
+  // }
+
+  .styles_react-code-input-container__tpiKG {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .confirmField_wrapper .styles_react-code-input__CRulA {
+    width: 367px;
+  }
+}
+.styles_react-code-input-container__tpiKG {
+  width: 368px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.passwordBox {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px 24px;
+  width: 322px;
+  margin: auto;
+
+  b {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+    padding-right: 12px;
+    margin-bottom: 8px;
+  }
+  span {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

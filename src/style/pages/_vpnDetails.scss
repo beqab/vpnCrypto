@@ -1,0 +1,27 @@
+.vpnForm {
+  background-color: #141616;
+  border-radius: 10px;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 128%;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+  form {
+    max-width: 377px;
+    width: 100%;
+    margin: auto;
+  }
+}
