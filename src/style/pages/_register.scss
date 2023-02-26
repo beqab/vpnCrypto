@@ -120,3 +120,19 @@
     line-height: 24px;
   }
 }
+
+@media only screen and (max-width: 769px) {
+  .register_wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .downloadGroup {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    display: flex;
+    img {
+      width: 45%;
+      margin-bottom: 10px;
+    }
+  }
+}
