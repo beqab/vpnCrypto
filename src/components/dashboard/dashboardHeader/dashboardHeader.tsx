@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import classNames from "classnames";
 
 export const DashboardHeader = () => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  useEffect(() => {
+    const closeMemnu = () => setOpenMenu(false);
+    window.addEventListener("click", closeMemnu);
+    return () => {
+      window.removeEventListener("click", closeMemnu);
+    };
+  }, []);
   return (
     <>
       <header className="dashboardHeader d-flex justify-content-between">
@@ -69,14 +79,32 @@ export const DashboardHeader = () => {
               />
             </defs>
           </svg>
+
+          <svg
+            onClick={e => {
+              e.preventDefault();
+              setOpenMenu(!openMenu);
+            }}
+            className="d-inline-block d-md-none dashboardHeader-burger"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M35 30H5V26.6667H35V30ZM35 21.6667H5V18.3333H35V21.6667ZM35 13.3333H5V10H35V13.3333Z"
+              fill="white"
+            />
+          </svg>
         </div>
       </header>
       <div className="d-flex">
-        <aside className="dashboardMenu">
+        <aside className={classNames("dashboardMenu", { isOpen: openMenu })}>
           <Link className="dashboardMenu_logo" to={"/dashboard"}>
             <img src="../logo-letter-dark.png (1).svg" />
           </Link>
-          <ul className="dashboardMenu">
+          <ul className="dashboardMenu_ul">
             <li>
               <NavLink to="/dashboard">
                 <svg

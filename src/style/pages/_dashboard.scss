@@ -6,7 +6,7 @@
   margin-top: -75px;
   padding-left: 34px;
   &_logo {
-    margin-bottom: 134px;
+    margin-bottom: 64px;
     display: inline-block;
     margin-top: 35px;
   }
@@ -152,6 +152,12 @@
   background-color: #141616;
   border-radius: 12px;
   padding: 51px 20px;
+
+  .btn {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
   p {
     text-align: center;
     max-width: 237px;
@@ -250,5 +256,76 @@
     height: 48px;
     width: 170px;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .dashboardMenu {
+    position: absolute;
+    display: none !important;
+    max-width: 100%;
+    &.isOpen {
+      display: block !important;
+    }
+  }
+  .dashboardHeader {
+    margin-left: 0;
+    &-burger {
+      margin-left: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .dashboardInfoLine_card {
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
+  .labelsGroup {
+    flex-wrap: wrap;
+    > div {
+      width: calc(50% - 8px);
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  .adWrapper {
+    img {
+      max-width: 100%;
+    }
+  }
+  .transactions {
+    margin-bottom: 40px;
+  }
+
+  .pnSoftware {
+    background-color: inherit;
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .downloadGroup {
+      a {
+        display: block;
+        max-width: calc(46% - 8px);
+      }
+      img {
+        height: 63px;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+  .VpnConfig {
+    background-color: transparent;
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }
