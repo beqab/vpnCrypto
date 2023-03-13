@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { AuthService } from "../../../api/auth/auth.http";
 import { VpnService } from "../../../api/vpnService/vpnService.http";
 import { RegisterContext } from "../registerContext/registerContext";
+import { generateFromEmail, generateUsername } from "unique-username-generator";
 
 import generator from "generate-password";
 
@@ -14,7 +15,9 @@ interface FormData {
 }
 
 export const CreateVpnUsername = () => {
-  const { user, setCurrentStep, setUser } = useContext(RegisterContext);
+  const { user, setCurrentStep, setUser, registerForm } = useContext(
+    RegisterContext,
+  );
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -23,7 +26,24 @@ export const CreateVpnUsername = () => {
     clearErrors,
     formState: { errors },
     watch,
+    setValue,
   } = useForm<FormData>();
+
+  const generateUser = () => {
+    const generateUsername = () => {
+      const username = registerForm.email.split("@")[0]; // Extract username from email
+      const randomNumber = Math.floor(Math.random() * 10000); // Generate a random number between 0-9999
+      const uniqueUsername = `${username}${randomNumber}`; // Combine username and random number
+      return uniqueUsername;
+    };
+
+    const generatePassword = () => {
+      return Math.random().toString(36).slice(4);
+    };
+
+    setValue("password", generatePassword());
+    setValue("username", generateUsername());
+  };
 
   const createVpnAccount = handleSubmit(async data => {
     setIsLoading(true);
@@ -142,7 +162,10 @@ export const CreateVpnUsername = () => {
             />
           </FormGroup>
         </div>
-        <Button className="btn btn-default w-100 justify-content-center">
+        <Button
+          loading={isLoading}
+          className="btn btn-default w-100 justify-content-center"
+        >
           Confirm
         </Button>
       </form>
@@ -150,7 +173,7 @@ export const CreateVpnUsername = () => {
         <div>OR</div>
       </div>
       <Button
-        loading={isLoading}
+        onClick={generateUser}
         className="btn btn-light  w-100  justify-content-center"
       >
         Automatically generate
