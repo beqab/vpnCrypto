@@ -70,7 +70,7 @@ export const Login = () => {
           <FormGroup
             errorMessage={
               errors.email?.type === "required"
-                ? "email is required"
+                ? "Email is required"
                 : errors.email?.type === "pattern"
                 ? "Please enter email in correct format"
                 : ""
@@ -88,7 +88,11 @@ export const Login = () => {
               placeholder="example@mail.com"
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup
+            errorMessage={
+              errors.email?.type === "required" ? "Password is required" : ""
+            }
+          >
             <Input
               useRef={register("password", {
                 required: "password is require",
