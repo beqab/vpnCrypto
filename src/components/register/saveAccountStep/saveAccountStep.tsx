@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { SetUser } from "../../../redux/actions";
 import { Button } from "../../common/form";
+import { RegisterContext } from "../registerContext/registerContext";
 
 export const SaveAccountStep = () => {
+  const dispatch = useDispatch();
+  const { user } = useContext(RegisterContext);
+  const navigate = useNavigate();
+  const loginUser = () => {
+    dispatch(SetUser({ user, token: user.token }));
+    navigate("/dashboard");
+  };
   return (
     <div className="registerStep mw-100">
       <h2>Download software for your device:</h2>
       <p className="text-center mt-5">Your vpn username and password are:</p>
       <div className="passwordBox">
         <div>
-          <b>Username:</b> <span>usernameexample444</span>
+          <b>Username:</b> <span>{user?.meta?.vpn?.data?.username}</span>
         </div>
         <div>
-          <b className="mb-0">Password:</b> <span>passwordQwda123</span>
+          <b className="mb-0">Password:</b>{" "}
+          <span>{user?.meta?.vpn?.data?.password}</span>
         </div>
       </div>
       <p className="text-center text mt-4">
@@ -37,7 +49,12 @@ export const SaveAccountStep = () => {
         <Button className="btn btn-light  w-100 justify-content-center mb-4">
           Generate config file
         </Button>
-        <Button className="btn w-100 justify-content-center">Finish</Button>
+        <Button
+          onClick={loginUser}
+          className="btn w-100 justify-content-center"
+        >
+          Finish
+        </Button>
       </div>
     </div>
   );

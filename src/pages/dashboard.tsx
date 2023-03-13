@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../components/common/form";
+import { useCheckAuth } from "../utility/useCheckAuth";
 
 export const Dashboard = () => {
+  useCheckAuth();
+  // console.log("get user");
+
   return (
     <div>
       <div className="dashboardInfoLine">

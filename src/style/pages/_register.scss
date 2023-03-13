@@ -121,6 +121,13 @@
   }
 }
 
+.formContainer {
+  input.form-control {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+}
+
 @media only screen and (max-width: 769px) {
   .register_wrapper {
     padding-left: 25px;

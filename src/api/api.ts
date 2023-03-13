@@ -1,4 +1,4 @@
-export const STORE_API_BASE_URL = "https://gcarnode.herokuapp.com";
+export const STORE_API_BASE_URL = "https://app.vpncrypto.net";
 // export const STORE_API_BASE_URL = "http://127.0.0.1:8001/store";
 
 // eslint-disable-next-line no-useless-escape

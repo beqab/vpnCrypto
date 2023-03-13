@@ -18,6 +18,8 @@ import { VpnDetails } from "./pages/vpnDetails";
 import { VpnSoftware } from "./pages/vpnSoftware";
 import { VpnConfig } from "./pages/vpnConfig";
 import { Settings } from "./pages/settings";
+import "react-toastify/dist/ReactToastify.css";
+import { useCheckAuth } from "./utility/useCheckAuth";
 
 const router = createBrowserRouter([
   {
