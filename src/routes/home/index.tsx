@@ -15,14 +15,6 @@ function Home() {
         <div className="row">
           <div className="col-md-5 d-flex justify-content-center align-items-center">
             <Login />
-            <Button
-              onClick={() => {
-                dispatch(fetchTodo() as any);
-              }}
-              className="Btn"
-            >
-              test
-            </Button>
           </div>
           <div className="col-md-7 text-right">
             <img
